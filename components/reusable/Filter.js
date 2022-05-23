@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: "#E8EBEE",
         borderRadius: 5,
-        marginHorizontal: 10,
         padding: 5,
+        marginRight: 15
     },
     title: {
         color: "#5C616F",
@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
     activeContainer: {
         backgroundColor: "#F26333",
         borderRadius: 5,
-        marginHorizontal: 10,
         padding: 5,
+        marginRight: 15
     },
     activeTitle: {
         color: "#FFEBE4",

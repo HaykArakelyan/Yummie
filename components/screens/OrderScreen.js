@@ -57,7 +57,7 @@ function OrderScreen(props) {
                     )}
                 </ScrollView>
             </View>
-            <View style={styles.ordersListContainer}>
+            <View>
                 <ScrollView >
                     <View style={styles.ordersList}>
                         {data.length != 0 && data.map((items) => <Card
@@ -87,14 +87,11 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: "#F6F7F8",
         flex: 1,
-        justifyContent: "flex-end",
+        paddingTop: 150,
     },
     filtersContainer: {
-        paddingHorizontal: 15,
+        paddingHorizontal: 10,
         paddingVertical: 10,
-    },
-    ordersListContainer: {
-        height: 650,
     },
     ordersList: {
         alignSelf: "center",

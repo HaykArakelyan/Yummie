@@ -43,45 +43,42 @@ function LoginScreen(props) {
 
 const styles = StyleSheet.create({
     container: {
+        alignItems: "center",
         flex: 1,
         marginTop: 50,
-        alignItems: "center",
-        height: 500,
         padding: 20,
     },
     loginHeadingsContainer: {
-        // alignItems: "center",
-        width: "100%"
+        alignSelf: "flex-start"
     },
     loginHeading: {
+        color: "#040C22",
         fontSize: 24,
         fontWeight: "bold",
-        color: "#040C22",
+        marginTop: 10,
         textAlign: "left",
-        marginTop: 10
     },
     loginSubehading: {
-        textAlign: "left",
-        fontSize: 16,
         color: "#363D4E",
-        marginTop: 10,
+        fontSize: 16,
         marginBottom: 20,
-        width: "80%"
+        marginTop: 10,
+        textAlign: "left",
     },
     loginInputsContainer: {
-        width: "100%",
         alignItems: "center",
+        width: "100%",
     },
     loginInput: {
         backgroundColor: "#E8EBEE",
-        width: "100%",
-        padding: 10,
-        marginVertical: 5,
-        height: 60,
         borderRadius: 10,
+        height: 60,
+        marginVertical: 5,
+        padding: 10,
+        width: "100%",
     },
     loginButton: {
-        width: "100%"
+        width: "100%",
     },
 })
 

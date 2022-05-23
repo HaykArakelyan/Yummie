@@ -5,7 +5,6 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 function ProductScreen({ element }) {
 
-    //This part could be in the redux, but since I dont have a CartScreen, I didn't add it
     const [counter, setCounter] = useState(1);
     const deleteFromCart = () => {
         if (counter === 0) {
@@ -54,7 +53,7 @@ function ProductScreen({ element }) {
                         /> {element.time} min
                     </Text>
                 </View>
-                <View style={styles.productHeadingBottom}>
+                <View>
                     <Text style={styles.price}>${element.price}</Text>
                     <View style={styles.priceContainer}>
                         <Text style={styles.productOldPrice}>${element.oldPrice} </Text>
@@ -134,11 +133,13 @@ const styles = StyleSheet.create({
         marginTop: 15,
     },
     productHeadingContainer: {
+        flex: 1,
         flexDirection: "row",
+        justifyContent: "space-between",
         marginTop: 30,
     },
     productHeadingTop: {
-        width: "60%",
+        flex: 0.6
     },
     header: {
         color: "#040C22",
@@ -150,9 +151,10 @@ const styles = StyleSheet.create({
         marginTop: 8,
     },
     productHeadingBottom: {
-        width: "40%"
+
     },
     priceContainer: {
+        flex: 0.4,
         flexDirection: "row",
         justifyContent: "flex-end",
     },
@@ -214,13 +216,11 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         marginTop: 10,
         paddingVertical: 15,
-        width: "100%",
     },
     addToCartLeft: {
         alignItems: "center",
         flexDirection: "row",
-        justifyContent: "center",
-        width: "40%",
+        paddingRight: 20,
     },
     deleteFromCart: {
         backgroundColor: "#E8EBEE",
@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         justifyContent: "center",
         padding: 25,
-        width: "60%",
+        flex: 1,
     },
     addToCartButtonText: {
         color: "#FFFFFF",

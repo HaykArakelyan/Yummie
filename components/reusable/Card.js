@@ -5,7 +5,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 function Card({ name, price, oldPrice, sale, time, rank, foodInfo, openCardRef, setElement }) {
 
     return (
-        <TouchableOpacity style={{ width: "100%" }} onPress={() => {
+        <TouchableOpacity onPress={() => {
             openCardRef(),
                 setElement({
                     name,
@@ -18,7 +18,7 @@ function Card({ name, price, oldPrice, sale, time, rank, foodInfo, openCardRef, 
                 })
         }}>
             <View style={styles.container}>
-                <View style={styles.cardLeft}>
+                <View>
                     <ImageBackground source={require("../../assets/images/orders/ramen.png")} style={styles.itemImage}>
                         {sale !== "" && <View style={styles.itemSale}>
                             <Text style={styles.itemSaleText}>{sale}</Text>
@@ -57,16 +57,11 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         flexDirection: "row",
         marginVertical: 10,
-        overflow: "hidden",
-        width: "90%",
-    },
-    cardLeft: {
-        width: 120,
     },
     itemImage: {
         borderRadius: 10,
         height: 120,
-        width: "100%",
+        width: 120,
     },
     itemSale: {
         marginTop: 7,
@@ -82,9 +77,8 @@ const styles = StyleSheet.create({
     cardRight: {
         borderBottomRightRadius: 3,
         borderTopRightRadius: 3,
-        height: 120,
+        flexGrow: 1,
         padding: 5,
-        width: "70%",
     },
     cardRightTop: {
         flexDirection: "row",
@@ -92,7 +86,7 @@ const styles = StyleSheet.create({
         padding: 5,
     },
     cardRightPriceContainer: {
-        flexDirection: "row"
+        flexDirection: "row",
     },
     cardRightPrice: {
         color: "#F26333",
@@ -100,18 +94,18 @@ const styles = StyleSheet.create({
         fontWeight: "700",
     },
     cardRightOldPrice: {
-        textDecorationLine: "line-through"
+        textDecorationLine: "line-through",
     },
     cardHeading: {
-        height: "75%",
         justifyContent: "space-between",
+        flexGrow: 1,
         padding: 5,
-        width: "80%"
     },
     itemName: {
         color: "#363D4E",
         fontSize: 16,
         fontWeight: "500",
+        width: "80%",// ???
     },
     itemTime: {
         color: "#5C616F",

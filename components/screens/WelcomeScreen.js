@@ -114,46 +114,43 @@ function WelcomeScreen(props) {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         alignItems: "center",
+        backgroundColor: "#FFFFFF",
+        flex: 1,
         justifyContent: "center",
         paddingTop: 100,
-        backgroundColor: "#FFFFFF"
     },
     carouselItemContainer: {
-        top: StatusBar.currentHeight,
-        height: 400,
         alignItems: "center",
         paddingVertical: 50,
+        top: StatusBar.currentHeight,
     },
     carouselItemHeading: {
+        color: "#040C22",
         fontSize: 20,
         fontWeight: "bold",
-        color: "#040C22",
         textAlign: "center",
-
     },
     carouselItemSubheading: {
-        textAlign: "center",
         fontSize: 14,
+        textAlign: "center",
     },
     carouselContainer: {
-        width: "100%",
-        alignItems: "center"
+        alignItems: "center",
+        flex: 1,
     },
     welcomeButtons: {
-        width: "100%",
         marginTop: 70,
+        width: "100%",
     },
     policyContainer: {
-        width: "80%",
-        paddingHorizontal: 5,
+        paddingHorizontal: 30,
     },
     privacyPolicy: {
-        textAlign: "center",
-        fontSize: 13,
         color: "#5C616F",
+        fontSize: 13,
         lineHeight: 18,
+        textAlign: "center",
     }
 })
 
