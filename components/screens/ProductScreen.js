@@ -122,7 +122,6 @@ const styles = StyleSheet.create({
         marginTop: 30,
     },
     productImage: {
-        alignItems: "flex-end",
         alignSelf: "center",
         borderRadius: 15,
         height: 370,
@@ -130,15 +129,17 @@ const styles = StyleSheet.create({
         width: 370,
     },
     imageLikeIcon: {
+        alignSelf: "flex-end",
         marginRight: 10,
         marginTop: 15,
     },
     productHeadingContainer: {
+        flex: 1,
         flexDirection: "row",
         marginTop: 30,
     },
     productHeadingTop: {
-        width: "60%",
+        flexGrow: 0.6,
     },
     header: {
         color: "#040C22",
@@ -150,7 +151,7 @@ const styles = StyleSheet.create({
         marginTop: 8,
     },
     productHeadingBottom: {
-        width: "40%"
+        flexGrow: 0.4,
     },
     priceContainer: {
         flexDirection: "row",
@@ -212,15 +213,14 @@ const styles = StyleSheet.create({
     },
     addToCartContainer: {
         flexDirection: "row",
+        justifyContent: "space-between",
         marginTop: 10,
         paddingVertical: 15,
-        width: "100%",
     },
     addToCartLeft: {
         alignItems: "center",
         flexDirection: "row",
         justifyContent: "center",
-        width: "40%",
     },
     deleteFromCart: {
         backgroundColor: "#E8EBEE",
@@ -257,9 +257,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#F26333",
         borderRadius: 10,
+        flexGrow: 0.8,
         justifyContent: "center",
-        padding: 25,
-        width: "60%",
+        padding: 15,
     },
     addToCartButtonText: {
         color: "#FFFFFF",

@@ -28,6 +28,7 @@ function CustomButton({
             marginBottom: marginBottom,
             marginTop: marginTop,
             width: width,
+            // flex: 1
         }}
             onPress={onPress}
         >

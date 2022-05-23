@@ -12,7 +12,7 @@ function LoginScreen(props) {
     }
     return (
         <View style={styles.container}>
-            <View style={styles.loginHeadingsContainer}>
+            <View>
                 <Text style={styles.loginHeading}>Log in</Text>
                 <Text style={styles.loginSubehading}>We use this information to facilitate transactions on this applicaton</Text>
             </View>
@@ -27,7 +27,7 @@ function LoginScreen(props) {
                     style={styles.loginInput}
                 />
             </View>
-            <View style={styles.loginButton}>
+            <View>
                 <CustomButton
                     title={"Login"}
                     height={50}
@@ -44,44 +44,34 @@ function LoginScreen(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 50,
-        alignItems: "center",
         height: 500,
+        marginTop: 50,
         padding: 20,
     },
-    loginHeadingsContainer: {
-        // alignItems: "center",
-        width: "100%"
-    },
     loginHeading: {
+        color: "#040C22",
         fontSize: 24,
         fontWeight: "bold",
-        color: "#040C22",
+        marginTop: 10,
         textAlign: "left",
-        marginTop: 10
     },
     loginSubehading: {
-        textAlign: "left",
-        fontSize: 16,
         color: "#363D4E",
-        marginTop: 10,
+        fontSize: 16,
         marginBottom: 20,
-        width: "80%"
+        marginTop: 10,
+        textAlign: "left",
     },
     loginInputsContainer: {
-        width: "100%",
         alignItems: "center",
     },
     loginInput: {
         backgroundColor: "#E8EBEE",
-        width: "100%",
+        width: "100%",// should be here
         padding: 10,
         marginVertical: 5,
         height: 60,
         borderRadius: 10,
-    },
-    loginButton: {
-        width: "100%"
     },
 })
 
